@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-  #Customize gitblit.properties
+#Customize gitblit.properties
 
 # echo -n > /opt/gitblit-data/gitblit.properties
  
@@ -61,80 +61,4 @@ set -e
 [ -z "${WEB_SHOW_HTTP_SERVLET_URLS}" ] || echo "web.showHttpServletUrls=${WEB_SHOW_HTTP_SERVLET_URLS}" >> /opt/gitblit-data/gitblit.properties
 [ -z "${WEB_SHOW_GIT_DAEMON_URLS}" ] || echo "web.showGitDaemonUrls=${WEB_SHOW_GIT_DAEMON_URLS}" >> /opt/gitblit-data/gitblit.properties
 
-
-
-
-
-
-
-
-
-#########################NOT USED YET ###################################################
-
-#realm.windows.backingUserService = ${baseFolder}/users.conf
-#realm.pam.backingUserService = ${baseFolder}/users.conf
-#realm.salesforce.backingUserService = ${baseFolder}/users.conf
-#realm.ldap.backingUserService = ${baseFolder}/users.conf
-#realm.ldap.displayName = @displayName
-#realm.ldap.email = @mail
-#realm.ldap.uid = uid
-#realm.redmine.backingUserService = ${baseFolder}/users.conf
-#server.tempFolder = ${baseFolder}/temp
-
-#regex.global.bug = \\b(Bug:)(\\s*[#]?|-){0,1}(\\d+)\\b!!!<a href="http://somehost/bug/$3">Bug-Id: $3</a>
-#regex.global.changeid = \\b(Change-Id:\\s*)([A-Za-z0-9]*)\\b!!!<a href="http://somehost/changeid/$2">Change-Id: $2</a>
-#regex.myrepository.bug = \\b(Bug:)(\\s*[#]?|-){0,1}(\\d+)\\b!!!<a href="http://elsewhere/bug/$3">Bug-Id: $3</a>
-
-# [ -z "${SERVER_HTTP_PORT}" ] || git config -f "/opt/gitblit-data/gitblit.properites" server.httpPort "${SERVER_HTTP_PORT}"
-# [ -z "${SERVER_HTTPS_PORT}" ] || git config -f "/opt/gitblit-data/gitblit.properites" server.httpsPort "${SERVER_HTTPS_PORT}"
-# [ -z "${SERVER_REDIRECT_TO_HTTPS_PORT}" ] || git config -f "/opt/gitblit-data/gitblit.properites" server.redirectToHttpsPort "${SERVER_REDIRECT_TO_HTTPS_PORT}"
-# [ -z "${WEB_ENABLE_RPC_MANAGEMENT}" ] || git config -f "/opt/gitblit-data/gitblit.properites" web.enableRpcManagement "${WEB_ENABLE_RPC_MANAGEMENT}"
-# [ -z "${WEB_ENABLE_RPC_ADMINISTRATION}" ] || git config -f "/opt/gitblit-data/gitblit.properites" web.enableRpcAdministration "${WEB_ENABLE_RPC_ADMINISTRATION}"
-# [ -z "${SERVER_STORE_PASSWORD}" ] || git config -f "/opt/gitblit-data/gitblit.properites" server.storePassword "${SERVER_STORE_PASSWORD}"
-
-#######################USED ABOVE###########################################################
-
-# git.daemonBindInterface = 10.51.207.3
-# git.daemonPort = 0
-# git.enableGitServlet = false
-# git.defaultAccessRestriction = VIEW
-# git.defaultAuthorizationControl = NAMED
-# git.defaultIncrementalPushTagPrefix = r
-# git.streamFileThreshold = 50m
- 
-# web.authenticateViewPages = true
-# web.allowAdministration = false
-# web.enableRpcServlet = false 
-
-# realm.userService = com.gitblit.LdapUserService
-# realm.ldap.server = ldap://dcsdc1eu01.goep.hm.com:389
-# realm.ldap.username = CN=LDAP Devtools Service Account,CN=Users,DC=goep,DC=hm,DC=com
-# realm.ldap.password = a4822sPJR10nLBB
-# realm.ldap.maintainTeams = true
-# realm.ldap.accountBase = CN=Users,DC=goep,DC=hm,DC=com
-# realm.ldap.accountPattern = (&(objectClass=person)(sAMAccountName=${username}))
-# realm.ldap.groupBase = ou=Groups,dc=goep,dc=hm,dc=com
-# realm.ldap.groupMemberPattern = (&(objectClass=group)(member=${dn}))
-# realm.ldap.admins = @GOEP.DEV.DCSC.Mobilisation
-# realm.ldap.ldapCachePeriod = 2 MINUTES
-# realm.ldap.synchronizeUsers.enable = false
-# realm.ldap.synchronizeUsers.removeDeleted = true
-
-# server.useNio = true
-# server.threadPoolSize = 50
-# server.contextPath = /gitblit
-# server.httpPort = 9000
-# server.httpsPort = 8443
-# server.ajpPort = 0
-# server.httpBindInterface = 10.51.207.3
-# server.httpsBindInterface = localhost
-# server.ajpBindInterface = localhost
-# server.certificateAlias = localhost
-# server.storePassword = gitblit
-# server.requireClientCertificates = false
-# server.shutdownPort = 8093
-
 exec "$@"
-
-
-
