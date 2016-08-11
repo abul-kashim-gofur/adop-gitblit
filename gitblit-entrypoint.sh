@@ -3,7 +3,7 @@ set -e
 
 #Customize gitblit.properties
 
-# echo -n > /opt/gitblit-data/gitblit.properties
+echo -n > /opt/gitblit-data/gitblit.properties
  
 [ -z "${SERVER_HTTP_PORT}" ] || echo "server.httpPort=${SERVER_HTTP_PORT}" >> /opt/gitblit-data/gitblit.properties
 [ -z "${SERVER_HTTPS_PORT}" ] || echo "server.httpsPort=${SERVER_HTTPS_PORT}" >> /opt/gitblit-data/gitblit.properties
