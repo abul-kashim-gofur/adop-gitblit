@@ -1,4 +1,4 @@
-FROM jmoger/gitblit:latest
+FROM jmoger/gitblit:1.5.1
 
 MAINTAINER Rushan Pun, <rushan.pun@accenture.com>
 
