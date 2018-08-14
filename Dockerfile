@@ -13,5 +13,5 @@ ENTRYPOINT ["/gitblit-entrypoint.sh"]
 workdir /opt/gitblit
 
 expose 9000
-cmd ["java", "-server", "-Xmx1024M", "-Djava.awt.headless=true", "-jar", "/opt/gitblit/gitblit.jar", "--baseFolder", "/opt/gitblit-data"]
+cmd ["java", "-server", "-Xmx5g", "-Djava.awt.headless=true", "-jar", "/opt/gitblit/gitblit.jar", "--baseFolder", "/opt/gitblit-data"]
 
