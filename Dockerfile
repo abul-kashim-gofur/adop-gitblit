@@ -1,6 +1,6 @@
-FROM jmoger/gitblit:1.5.1
+FROM jmoger/gitblit:latest
 
-MAINTAINER Rushan Pun, <rushan.pun@accenture.com>
+MAINTAINER Abul Kashim Gofur, <abul.k.gofur@accenture.com>
 
 USER root
 COPY gitblit-entrypoint.sh /
